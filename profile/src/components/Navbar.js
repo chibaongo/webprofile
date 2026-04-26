@@ -123,7 +123,7 @@ export default function Navbar() {
                     ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
       >
         <nav className="flex flex-col px-6 py-4 gap-1">
-          {NAV_ITEMS.map(({ id, label }) => (
+          {NAV_ITEMS.map(({ id, label },index) => (
             <button
               key={id}
               onClick={() => scrollTo(id)}
@@ -135,7 +135,7 @@ export default function Navbar() {
                           }`}
             >
               <span className="text-slate-700 mr-2">
-                {String(NAV_ITEMS.indexOf({ id, label }) + 1).padStart(2, "0")}.
+                 {/* {String(index + 1).padStart(2, "0")}.  */}
               </span>
               {label}
             </button>
